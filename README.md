@@ -6,7 +6,6 @@
 
 ## Technologies and libraries
 * Html
-* Css
 * Sass (SCSS)
 * Vue.js
 * Php
