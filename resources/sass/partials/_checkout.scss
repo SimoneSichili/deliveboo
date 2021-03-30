@@ -1,0 +1,299 @@
+#checkout {
+
+
+  .home-btn {
+    &:hover {
+      color: $brand-orange;
+      background-color: white;
+    }
+  }
+}
+.off-btn {
+  background-color: lighten($brand-orange, 20%);
+  border-color: lighten($brand-orange, 20%);
+  &:hover {
+    background-color: lighten($brand-orange, 20%);
+    box-shadow: none;
+  }
+}
+
+label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form {
+  margin: 20px 0;
+}
+
+.wrapper {
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: flex-start;
+  margin-bottom: 30px;
+  .card-user {
+    padding: 25px;
+    background: url("/img/home/cattura.png") center center;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px 5px rgb(0 0 0 / 10%);
+  
+    input {
+      width: 100%;
+      padding: 0 20px;
+      font-size: 16px;
+      line-height: 50px;
+      border: #666;
+      border-radius: 10px;
+      color: #666;
+      background: #fafafa;
+      outline: none;
+      margin: 0;
+    }
+    .name-surname {
+      display: flex;
+      margin-top: 30px;
+      .user-name{
+        width: 100%;
+      } 
+    }
+    .email-telephone {
+      display: flex;
+      margin-top: 20px;
+
+      .user-email{
+        width: 50%;
+        margin-right: 30px;
+      }
+
+      .user-telephone{
+        width: 50%;
+        -moz-appearance: textfield;
+      } 
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    .user-address {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+  }
+}
+
+// Cart
+.checkout-cart {
+  // width: 30%;
+  // position: sticky;
+  // top: 0;
+  // height: 100%;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 7px lightgrey;
+
+  .cart-top {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: $brand-orange;
+  }
+
+  .dish-price {
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+  }
+  .show-cart {
+    padding: 8px;
+    border-bottom: 2px solid rgba(157, 157, 157, 0.2);
+    border-radius: 10px;
+
+    .quantity-section {
+      display: inline-block;
+      width: 25%;
+
+      .quantity-btn {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        margin-right: 2px;
+        font: 13px Arial, sans-serif;
+        font-weight: bold;
+        background-color: white;
+        color: $brand-orange;
+        border: 2px solid $brand-orange;
+        border-radius: 100%;
+        transition: all 0.4s;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $brand-orange;
+          color: white;
+        }
+      }
+      .plus-sign {
+       line-height: 1.34em;
+      }
+      .quantity-number {
+        margin-right: 2px;
+      }
+    }
+
+    .dish-name {
+      display: inline-block;
+      width: 50%;
+      font-size: 13px;
+    }
+    .dish-price {
+      font-size: 14px;
+    }
+  }
+  .total-cart {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 8px 27px 5px 20px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .card-user .email-telephone {
+    flex-direction: column;
+    .user-email{
+      width: 100%;
+    }
+    .user-telephone{
+      width: 100%;
+      margin-top: 20px;
+    } 
+  }
+}
+
+//Loading
+
+body {
+  position: relative;
+}
+
+.not-active {
+  display: none;
+}
+
+.active-container {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.90);
+
+  svg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+            transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+
+  .stroke-still {
+    stroke: #232323;
+  }
+
+  .stroke-animation {
+    -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+            animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+
+  @-webkit-keyframes stroke-spacing {
+    0% {
+      stroke-dasharray: 0 200;
+    }
+    45% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 200 200;
+    }
+    90% {
+      stroke-dashoffset: -200;
+      stroke-dasharray: 200 200;
+    }
+    100% {
+      stroke-dashoffset: -200;
+      stroke-dasharray: 200 200;
+    }
+  }
+
+  @keyframes stroke-spacing {
+    0% {
+      stroke-dasharray: 0 200;
+    }
+    45% {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 200 200;
+    }
+    90% {
+      stroke-dashoffset: -200;
+      stroke-dasharray: 200 200;
+    }
+    100% {
+      stroke-dashoffset: -200;
+      stroke-dasharray: 200 200;
+    }
+  }
+
+  @-webkit-keyframes stroke-color {
+    0%  { stroke: #3498DB; }
+    24% { stroke: #a70053; }
+    25% { stroke: rgba(0, 105, 54, 0.9); }
+    49% { stroke: rgba(11, 218, 119, 0.9); }
+    50% { stroke: $brand-heavenly; }
+    74% { stroke: $brand-heavenly; }
+    75% { stroke: #f8f0f5; }
+    99% { stroke: rgba(255, 168, 3, 0.8) }
+  }
+
+  @keyframes stroke-color {
+    0%  { stroke: #3498DB; }
+    24% { stroke: #a70053; }
+    25% { stroke: rgba(0, 189, 97, 1); }
+    49% { stroke: rgba(11, 218, 119, 1); }
+    50% { stroke: rgba(255, 168, 3, 0.8); }
+    74% { stroke: rgba(255, 168, 3, 1); }
+    75% { stroke: rgb(8, 152, 160); }
+    99% { stroke: rgb(0, 237, 250); }
+  }
+}
+
+

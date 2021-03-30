@@ -1,0 +1,126 @@
+#dashboard-body {
+    color: #fff;
+    background-color: #2a2d32;
+    // background-color: #212429;
+}
+
+.dashboard-btn {
+    color: #fff;
+    background-color: $brand-orange;
+    border: 1px solid $brand-orange;
+    &:hover {
+        background-color: darken($brand-orange, 5%);
+        border: 1px solid $brand-orange;
+    }
+}.dashboard-btn-back {
+    color: #fff;
+    background-color: $brand-heavenly;
+    border: 1px solid $brand-heavenly;
+    &:hover {
+        color: #fff;
+        background-color: darken($brand-heavenly, 5%);
+        border: 1px solid $brand-heavenly;
+    }
+}
+
+.dashboard-card {
+    position: relative;
+    .fas {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+.card-black {
+    margin-bottom: 30px;
+    color: #fff;
+    background-color: #343a40;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    img {
+        object-fit: cover;
+    }
+}
+
+// .table-index {
+//     img {
+//         max-width: 150px;
+//     }
+// }
+
+.table-show {
+    img {
+        max-width: 300px;
+    }
+}
+
+.destroy-form {
+    display: inline-block;
+    button {
+        margin-top: 0 !important;
+        margin-left: 15px;
+    }
+}
+
+.edit-form {
+    input,
+    textarea {
+        color: #fff;
+        background-color: #343a40;
+        
+    }
+    :focus {
+        color: #fff;
+        background-color: #343a40;
+    }
+
+}
+
+@media screen and (max-width: 575px) {
+    .card-black {
+        h5 {
+            font-size: 20px;
+        }
+        img {
+            height: 350px;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .card-black {
+        h5 {
+            font-size: 14px;
+        }
+        img {
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card-black {
+        h5 {
+            font-size: 20px;
+        }
+        img {
+            height: 250px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .card-black {
+        img {
+            height: 275px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .card-black {
+        img {
+            height: 300px;
+        }
+    }
+}

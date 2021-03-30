@@ -1,0 +1,302 @@
+$homeGrey: rgba(0, 0, 0, 0.03);
+$cardHeight: 380px;
+$cardImage: 200px;
+
+// Jumbotron Section
+
+.home-jumbotron {
+  position: relative;
+  height: 400px;
+  background: url("/img/home/jumbotron.jpeg") no-repeat center center;
+  background-size: cover;
+
+  .overlay {
+    display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .mycontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+.jumbotron-text {
+  z-index: 1;
+
+  .home-h1 {
+    font-size: 3.2em;
+  }
+  .home-h3 {
+    font-size: 1.3em;
+    margin: 15px 0 40px;
+  }
+  .home-h1, .home-h3{
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.home-btn {
+  padding: 10px 20px;
+  color: white;
+  background-color: $brand-orange;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid $brand-orange;
+  border-radius: 4px;
+  transition: all 0.3s;
+
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+.filter-btn {
+  padding: 0 10px;
+
+  &:hover {
+    color: $brand-orange;
+    background-color: white;
+  }
+}
+
+// /Jumbotron Section
+
+// CTA Section 
+  .home-CTA {
+    height: 120px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $homeGrey;
+
+    .mycontainer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .CTA-card {
+      display: inline-block;
+      width: 32%;
+      height: 100%;
+      text-align: center;
+    }
+
+    .CTA-img {
+      img {
+        height: 50px;
+        margin-bottom: 5px;
+      }
+    }
+
+    .CTA-text {
+      h5 {
+        font-size: 1.1em;
+        font-weight: bold;
+      }
+    }
+  }
+// /CTA Section
+
+// Categories Section
+  .home-categories { 
+    text-align: right;
+    
+    .mycontainer {
+      padding-top: 30px;
+      padding-bottom: 40px;
+      width: 100%;
+    }
+  }
+
+  .home-categories-carousel { 
+    text-align: center;
+    
+    .mycontainer {
+      padding-top: 30px;
+      padding-bottom: 40px;
+      width: 100%;
+    }
+
+    .carousel-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 10px;
+
+      border: 2px solid $homeGrey;
+    }
+    
+    .category-card {
+      display: inline-block;
+      margin: 10px;
+      background-color: rgba(239, 242, 244, 0.8);
+      border: 2px solid $homeGrey;
+      border-radius: 4px;
+      transition: all 0.4s;
+      width: 190px;
+      flex: 1 0 auto;
+
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 6px darkgrey;
+      }
+    }
+
+    .cardActive {
+      border: 2px solid rgba(255, 168, 3, 0.7);
+      box-shadow: 0 0 10px $brand-orange;
+      
+      &:hover {
+        box-shadow: 0 0 10px $brand-orange;
+      }
+    }
+
+    .carousel-img {
+      width: 60px;
+    }
+
+    .carousel-text {
+      font-size: 1.12em;
+      font-weight: bold;
+    }
+  }
+// /Categories Section
+
+// Restaurants Section
+.home-restaurants {
+  text-align: center;
+  padding-bottom: 50px;
+
+  .restaurant-container {
+    text-align: left;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    margin-top: 20px;
+    
+    .restaurant-card {
+        // max-width: 32%;
+        height: $cardHeight;
+        margin: 15px 0;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 0 6px lightgrey;
+        transition: all 0.4s;
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0 0 12px grey;
+        }
+
+        &:hover .card-title {
+          text-decoration-color: $brand-orange;
+        }
+        &:hover .card-address>i {
+          color: $brand-orange;
+        }
+        &:hover .card-image {
+          transform: scale(1.08);
+        }
+        
+        * {
+          color: inherit;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        .image-container {
+          height: $cardImage;
+          overflow: hidden;
+        }
+
+        .card-image {
+          width: 100%;
+          object-fit: cover;
+          transition: all 0.9s;
+        }
+        
+        .card-body {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 180px;
+          padding: 15px;
+        }
+        
+        .card-title {
+          font-size: 1.3em;
+          font-weight: bold;
+          text-decoration: peru solid overline;
+          text-decoration-skip: objects;
+          transition: all 0.4s;
+        }
+        
+        .card-delivery {
+          position: absolute;
+          top: -15px;
+          right: 0px;
+          padding: 5px 7px;
+          border-radius: 1px;
+          font-size: 0.8em;
+          font-weight: bold;
+          color: white;
+          background-color: $brand-orange;
+        }
+        
+        .card-address {
+          color: grey;
+          margin-bottom: 0.4em;
+
+          i {
+            transition: all 0.4s;
+          }
+        }
+
+        .card-text {
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow:hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          font-style: italic;
+          color: $brand-grey;
+        }
+
+        .category-tags {
+          font-size: 0.8em;
+          font-weight: bold;
+          color: peru;
+        }
+    }
+  }
+}
+
+// /Restaurants Section
+
+
+@media only screen and (max-width: 720px) {
+  .home-categories-carousel {
+    .category-card {
+      width: 80px;
+    }
+  
+    .carousel-img {
+      width: 50px;
+    }
+  
+    .carousel-text {
+      font-size: 1.02em;
+      font-weight: bold;
+    }
+  }
+}

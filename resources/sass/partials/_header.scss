@@ -1,0 +1,108 @@
+.user-logout {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  svg {
+    height: 50px;
+    fill: $brand-heavenly;
+    transition: all 0.4s;
+    &:hover {
+      fill: $brand-orange;
+    }
+  }
+}
+
+.login-header-top, .register-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+
+  .dropdown-item {
+    width: 191px;
+    text-align: center;
+  }
+
+  .login {
+    display: inline-block;
+    width: 191px;
+    padding: 8px 50px;
+    background-color: $brand-orange;
+    border-radius: 5px;
+    border: none;
+    border: 2px solid $brand-orange;
+    color: $brand-white;
+    font-weight: 700;
+    transition: all 0.4s;
+    text-align: center;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-orange;
+      background-color: $brand-white;
+    }
+  }
+
+  .register {
+    padding: 8px 50px;
+    background-color: $brand-heavenly;
+    border-radius: 5px;
+    border: none;
+    border: 2px solid $brand-heavenly;
+    color: $brand-white;
+    font-weight: 700;
+    margin-left: 15px;
+    transition: all 0.4s;
+
+    &:hover {
+      text-decoration: none;
+      color: $brand-heavenly;
+      background-color: $brand-white;
+    }
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .back--none {
+       margin-top: 180px;
+    }
+  .register-header-top, .login-header-top {
+
+    .route-in-out, .user-logout{
+      position: absolute;
+      top: 88px;
+      right: 100%;
+      padding: 0px 30px 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      background-color: #F8FAFC;
+      padding-bottom: 50px;
+    }
+
+    .menu--open {
+      right: 0px;
+      width: 100%;
+    }
+    
+    h1 {
+      font-size: 30px;
+    }
+    .register {
+      margin-top: 30px;
+      margin-left: 0px;
+    }
+
+    .hamburger {
+      display: block;
+      font-size: 30px;
+    }
+  }
+
+}

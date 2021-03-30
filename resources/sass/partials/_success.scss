@@ -1,0 +1,23 @@
+main #success {
+    padding:30px 0px 60px 0px;
+    background-color: white;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .mycontainer{
+        text-align: center;
+        img {
+            margin: 30px 0px;
+            height: 200px;          
+        }   
+        
+        .home-btn {
+            display: inline-block;
+            margin-top: 50px;
+            &:hover {
+              color: $brand-orange;
+              background-color: white;
+            }
+          }
+    }
+}
