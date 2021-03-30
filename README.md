@@ -1,4 +1,20 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Deliveboo
+> Food delivery site
+
+## Screenshoot
+![Deliveboo-screenshoot](https://i.imgur.com/9KUXu4O.jpg)
+
+## Technologies and libraries
+* Html
+* Css
+* Sass (SCSS)
+* Vue.js
+* Php
+* Laravel
+* Bootstrap 4
+* Font Awesome
+
+<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" width="100"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
